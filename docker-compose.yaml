@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  bash-python:
+    build: bash-python/.
+    image: terryhorner/bash-python:latest
+    command: ["/bin/bash"]
+    volumes:
+      - ./:/local
+
+  bash-ruby:
+    build: bash-ruby/.
+    image: terryhorner/bash-ruby:latest
+    command: ["/bin/bash"]
+    volumes:
+      - ./:/local
