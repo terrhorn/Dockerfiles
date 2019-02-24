@@ -32,3 +32,11 @@ services:
     working_dir: /local
     volumes:
       - ./:/local
+
+  gcloud-go:
+    build: gcloud-go/.
+    image: terryhorner/gcloud-go:latest
+    command: ["/bin/bash"]
+    working_dir: /local
+    volumes:
+      - ./:/local
