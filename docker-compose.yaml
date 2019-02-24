@@ -5,9 +5,9 @@ services:
     build: bash-go/.
     image: terryhorner/bash-go:latest
     command: ["/bin/bash"]
-    working_dir: /local
+    working_dir: /go/src
     volumes:
-      - ./:/local
+      - ./:/go/src
 
   bash-python:
     build: bash-python/.
@@ -37,6 +37,6 @@ services:
     build: gcloud-go/.
     image: terryhorner/gcloud-go:latest
     command: ["/bin/bash"]
-    working_dir: /local
+    working_dir: /go/src
     volumes:
-      - ./:/local
+      - ./:/go/src
