@@ -24,3 +24,11 @@ services:
     working_dir: /local
     volumes:
       - ./:/local
+
+  gcloud:
+    build: gcloud/.
+    image: terryhorner/gcloud:latest
+    command: ["/bin/bash"]
+    working_dir: /local
+    volumes:
+      - ./:/local
