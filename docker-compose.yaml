@@ -24,3 +24,14 @@ services:
     working_dir: /local
     volumes:
       - ./:/local
+
+  ngrok:
+    build: ngrok/.
+    image: terryhorner/ngrok:latest
+    env_file:
+      - ngrok/ngrok.env
+    ports:
+     - "4040:4040"
+    working_dir: /local
+    volumes:
+      - ./:/local
