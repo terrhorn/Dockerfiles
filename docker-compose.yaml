@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.4"
 
 services:
   bash-go:
@@ -24,3 +24,8 @@ services:
     working_dir: /local
     volumes:
       - ./:/local
+
+  redis-cli:
+    build: redis-cli/.
+    network_mode: "host"
+    command: ["/bin/bash"]
